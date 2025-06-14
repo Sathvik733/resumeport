@@ -1,0 +1,113 @@
+/* Custom CSS for Portfolio - Dark Theme */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a202c; /* gray-900 */
+    color: #cbd5e0; /* gray-300 */
+}
+
+/* Section Title Styling with Underline Effect */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    color: #f7fafc; /* white */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 70%;
+    height: 4px;
+    background-color: #6366f1; /* indigo-500 */
+    border-radius: 9999px; /* rounded-full */
+}
+
+/* Navigation Link Hover Effect */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #818cf8; /* indigo-400 */
+}
+
+/* Social Icon Hover Effect */
+.social-icon {
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Card Styling with Hover Effect */
+.card {
+    background-color: #2d3748; /* gray-800 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Project Card Overlay Effect */
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.75rem; /* rounded-xl to match card */
+}
+
+/* Tab Button Styling (if used for future sections) */
+.tab-button.active {
+    background-color: #6366f1; /* indigo-500 */
+    color: white;
+}
+
+/* Hero Section Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.animate-fade-in-up-delay {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
